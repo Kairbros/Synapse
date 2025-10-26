@@ -9,7 +9,7 @@ const SynapseLanding = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
+
       // Detect active section
       const sections = ['inicio', 'servicios', 'nosotros', 'contacto'];
       const current = sections.find(section => {
@@ -22,7 +22,7 @@ const SynapseLanding = () => {
       });
       if (current) setActiveSection(current);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -42,11 +42,10 @@ const SynapseLanding = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-black/90 backdrop-blur-xl shadow-2xl' 
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled
+          ? 'bg-black/90 backdrop-blur-xl shadow-2xl'
           : 'bg-black/50 backdrop-blur-sm'
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => scrollToSection('inicio')}>
@@ -56,17 +55,16 @@ const SynapseLanding = () => {
               </div>
               <span className="text-2xl font-bold tracking-tight text-white">SYNAPSE</span>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-1 bg-white/5 backdrop-blur-sm rounded-full px-2 py-2 border border-white/10">
               {['Inicio', 'Servicios', 'Nosotros', 'Contacto'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeSection === item.toLowerCase()
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeSection === item.toLowerCase()
                       ? 'bg-white text-black shadow-lg'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
-                  }`}
+                    }`}
                 >
                   {item}
                 </button>
@@ -89,11 +87,10 @@ const SynapseLanding = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
-                    activeSection === item.toLowerCase()
+                  className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${activeSection === item.toLowerCase()
                       ? 'bg-white text-black'
                       : 'text-gray-400 hover:text-white hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   {item}
                 </button>
@@ -108,15 +105,15 @@ const SynapseLanding = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_50%)]"></div>
         <div className="max-w-7xl mx-auto relative w-full">
           <div className="text-center">
-            <div 
+            <div
               className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5 mb-8 hover:bg-white/10 transition-all duration-300 animate-fadeIn"
               style={{ animationDelay: '0.1s', opacity: 0, animation: 'fadeIn 0.6s ease-out 0.1s forwards' }}
             >
               <Sparkles className="w-4 h-4 text-gray-300" />
               <span className="text-sm text-gray-300">Inteligencia Artificial para el crecimiento empresarial</span>
             </div>
-            
-            <h1 
+
+            <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fadeIn px-4"
               style={{ animationDelay: '0.2s', opacity: 0, animation: 'fadeIn 0.6s ease-out 0.2s forwards' }}
             >
@@ -125,15 +122,15 @@ const SynapseLanding = () => {
                 Inteligencia Artificial
               </span>
             </h1>
-            
-            <p 
+
+            <p
               className="text-lg sm:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fadeIn px-4"
               style={{ animationDelay: '0.3s', opacity: 0, animation: 'fadeIn 0.6s ease-out 0.3s forwards' }}
             >
               Creamos soluciones inteligentes a medida que impulsan tu productividad, aumentan tus ganancias y optimizan la gestión de tu negocio.
             </p>
-            
-            <div 
+
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn px-4"
               style={{ animationDelay: '0.4s', opacity: 0, animation: 'fadeIn 0.6s ease-out 0.4s forwards' }}
             >
@@ -159,8 +156,8 @@ const SynapseLanding = () => {
               { icon: Zap, text: 'Implementación rápida', delay: '0.6s' },
               { icon: TrendingUp, text: 'Resultados medibles', delay: '0.7s' }
             ].map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-fadeIn"
                 style={{ animationDelay: item.delay, opacity: 0, animation: `fadeIn 0.6s ease-out ${item.delay} forwards` }}
               >
@@ -299,7 +296,8 @@ const SynapseLanding = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
+          {/* Contact Info */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a
                 href="mailto:synapse.contact.ai@gmail.com"
@@ -327,8 +325,12 @@ const SynapseLanding = () => {
                 </div>
               </a>
             </div>
+          </div>
 
-            <div className="mt-8 flex justify-center space-x-4">
+          {/* Social Media */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-300">Síguenos en redes sociales</h3>
+            <div className="flex justify-center space-x-4">
               <a
                 href="https://instagram.com/synapse.ai.solutions"
                 target="_blank"
@@ -338,12 +340,22 @@ const SynapseLanding = () => {
                 <Instagram className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61581158897634"
+                href="https://facebook.com/SynapseAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/20"
               >
                 <Facebook className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@synapse.ai.solutions1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/20"
+              >
+                <svg className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                </svg>
               </a>
             </div>
           </div>
