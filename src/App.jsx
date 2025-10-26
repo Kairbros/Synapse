@@ -340,7 +340,7 @@ const SynapseLanding = () => {
                 <Instagram className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
               </a>
               <a
-                href="https://facebook.com/SynapseAI"
+                href="https://www.facebook.com/profile.php?id=61581158897634"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/20"
