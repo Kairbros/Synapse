@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Brain, Zap, TrendingUp, MessageSquare, Bot, Settings, ChevronRight, Menu, X, Phone, Mail, Instagram, Facebook, CheckCircle, ArrowRight, Sparkles, Globe, Clock, Target } from 'lucide-react';
+import logo from './assets/Icon.png';
 
 const SynapseLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ const SynapseLanding = () => {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => scrollToSection('inicio')}>
               <div className="relative">
-                <Brain className="w-9 h-9 text-white transition-transform duration-300 group-hover:scale-110" />
+                <img src={logo} alt="Synapse Logo" className="w-10 h-10 text-white transition-transform duration-300 group-hover:scale-110" />
                 <div className="absolute inset-0 blur-xl bg-white/20 group-hover:bg-white/30 transition-all duration-300"></div>
               </div>
               <span className="text-2xl font-bold tracking-tight text-white">SYNAPSE</span>
@@ -366,7 +367,7 @@ const SynapseLanding = () => {
       <footer className="py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-black">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Brain className="w-6 h-6 text-gray-400" />
+            <img src={logo} alt="Synapse Logo" className="w-7 h-7 text-gray-400" />
             <span className="text-xl font-bold text-white">SYNAPSE</span>
           </div>
           <p className="text-gray-400 mb-2">Deja que SYNAPSE sea el puente entre tu negocio y el futuro</p>
