@@ -355,7 +355,14 @@ const ContactPage = () => {
   
   const handleSubmit = async (e) => {
 e.preventDefault();
-  
+  const ahora = new Date(); 
+  const año = ahora.getFullYear();
+  const mes = ahora.getMonth() + 1; // Suma 1 porque enero es 0
+  const dia = ahora.getDate();
+  const horas = ahora.getHours();
+  const minutos = ahora.getMinutes();
+  const segundos = ahora.getSeconds();
+  const time = `${dia}/${mes}/${año} ${horas}:${minutos}:${segundos}`;
   try {
     await emailjs.send(
       'service_uygscli',    
@@ -366,12 +373,13 @@ e.preventDefault();
         phone: formData.phone,
         company: formData.company,
         message: formData.message,
+        time: time
       },
       'jA3VfIcyKi2PW69i0'     
     );
     
     setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', company: '', message: '', time: '' });
   } catch (error) {
     console.error('Error:', error);
     alert('Hubo un error al enviar el mensaje');
