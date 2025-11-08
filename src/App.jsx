@@ -6,6 +6,10 @@ import n8n from './assets/n8n-icon.webp'
 import openai from './assets/openai.png'
 import gemini from './assets/gemini-color.png'
 import emailjs from '@emailjs/browser';
+import meta from './assets/meta.png'
+import microsoft from './assets/microsoft.png'
+import google from './assets/google.webp'
+import IBM from './assets/IBM.png'
 
 // Navigation Component
 const Navigation = () => {
@@ -164,6 +168,10 @@ const Tech = () => {
     { name: "OpenAI", icon: openai },
     { name: "Gemini", icon: gemini },
     { name: "n8n", icon: n8n },
+    {name: "Meta", icon: meta},
+    {name: "Microsoft", icon: microsoft},
+    {name: "Google", icon: google},
+    {name: "IBM", icon: IBM}
   ];
   return (
     <div className="mt-24 w-full overflow-hidden select-none">
