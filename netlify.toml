@@ -1,11 +1,18 @@
+# Configuración del build
+[build]
+  publish = "dist"  # o "build" dependiendo de tu configuración
+
+# Redirects para SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = false
-  
+
+# Headers para mejorar SEO y embeds
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
