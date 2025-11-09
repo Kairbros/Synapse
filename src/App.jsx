@@ -10,6 +10,7 @@ import meta from './assets/meta.png'
 import microsoft from './assets/microsoft.png'
 import google from './assets/google.webp'
 import IBM from './assets/IBM.png'
+import notFoundPageGif from './assets/404gif.gif';
 
 // Navigation Component
 const Navigation = () => {
@@ -594,6 +595,20 @@ const Footer = () => {
   );
 };
 
+// 404 Page
+const NotFoundPage = () => {
+  return (
+    <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4">
+      <h1 className="text-6xl font-bold mb-4">404</h1>
+      <p className="text-xl mb-8">Página no encontrada</p>
+      <img src={notFoundPageGif} alt="404 Not Found" className="w-64 h-64 mb-8" />
+      <Link to="/" className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-white/40 hover:scale-105">
+        Volver al inicio
+      </Link>
+    </section>
+  );
+}
+
 // Main App Component
 const SynapseLanding = () => {
   return (
@@ -605,6 +620,7 @@ const SynapseLanding = () => {
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/nosotros" element={<AboutPage />} />
           <Route path="/contacto" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>
