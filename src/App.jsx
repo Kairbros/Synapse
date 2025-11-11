@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { Brain, Zap, TrendingUp, MessageSquare, Bot, Settings, Menu, X, Phone, Mail, Instagram, Facebook, CheckCircle, ArrowRight, Sparkles, Globe, Target, Send, User, Building2, Video } from 'lucide-react';
-import icon from './assets/Icon.png'; 
+import icon from './assets/Icon.webp'; 
 import n8n from './assets/n8n-icon.webp'
 import openai from './assets/openai.png'
 import gemini from './assets/gemini-color.png'
@@ -46,10 +46,10 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => handleNavigation('/')}>
             <div className="relative">
-              <img src={icon} alt="Synapse Logo" className="w-10 h-10 text-white transition-transform duration-300 group-hover:scale-110" />
+              <img src={icon} alt="Ambar Logo" className="w-20 h-20 text-white transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 blur-xl bg-white/20 group-hover:bg-white/30 transition-all duration-300"></div>
             </div>
-            <span className="text-2xl font-bold tracking-tight text-white">SYNAPSE</span>
+            <span className="text-3xl font-bold tracking-tight text-white">AMBAR</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-1 bg-white/5 backdrop-blur-sm rounded-full px-2 py-2 border border-white/10">
@@ -148,7 +148,7 @@ const HomePage = () => {
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/IhBdyEGy3aw?si=00CRd6turgjwiX04"
-                  title="Synapse AI Solutions Video"
+                  title="Ambar AI Solutions Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -301,7 +301,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              ¿Por qué elegir <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">SYNAPSE?</span>
+              ¿Por qué elegir <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">AMBAR?</span>
             </h2>
             <p className="text-xl text-gray-400 mb-10 leading-relaxed">
               Somos un equipo apasionado por la innovación y el crecimiento empresarial, especializados en crear soluciones inteligentes que transforman negocios.
@@ -585,11 +585,11 @@ const Footer = () => {
     <footer className="py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-black">
       <div className="max-w-7xl mx-auto text-center">
         <div className="flex items-center justify-center space-x-2 mb-4">
-          <img src={icon} alt="Synapse Logo" className="w-7 h-7" />
-          <span className="text-xl font-bold text-white">SYNAPSE</span>
+          <img src={icon} alt="Ambar Logo" className="w-7 h-7" />
+          <span className="text-xl font-bold text-white">AMBAR</span>
         </div>
-        <p className="text-gray-400 mb-2">Deja que SYNAPSE sea el puente entre tu negocio y el futuro</p>
-        <p className="text-gray-600 text-sm">© 2025 SYNAPSE. Todos los derechos reservados.</p>
+        <p className="text-gray-400 mb-2">Deja que AMBAR sea el puente entre tu negocio y el futuro</p>
+        <p className="text-gray-600 text-sm">© 2025 AMBAR. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
@@ -610,7 +610,7 @@ const NotFoundPage = () => {
 }
 
 // Main App Component
-const SynapseLanding = () => {
+const AmbarLanding = () => {
   return (
     <Router>
       <div className="min-h-screen bg-black text-white">
@@ -640,4 +640,4 @@ const SynapseLanding = () => {
 };
 
 
-export default SynapseLanding;
+export default AmbarLanding;
